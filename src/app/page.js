@@ -8,7 +8,6 @@ import { commands } from "@uiw/react-md-editor";
 const customCommands = [commands.bold, commands.italic];
 const MDEditor = dynamic(() => import("@uiw/react-md-editor"), { ssr: false });
 
-
 export default function Home() {
   const [blogs, setBlogs] = useState([
     {
@@ -185,7 +184,6 @@ export default function Home() {
       <Header />
 
       <div className="max-w-7xl mx-auto px-4 py-4">
-
         <div className="flex items-center justify-between flex-wrap gap-4 mb-6">
           <h1 className="text-[34px] font-semibold text-[#5c0303]">Blogs List :-</h1>
 
@@ -215,7 +213,7 @@ export default function Home() {
             >
               <h2 className="text-lg font-bold mb-2 text-gray-800">{blog.title}</h2>
               <ReactMarkdown>{blog.description}</ReactMarkdown>
-              <p className="text-xs text-gray-500 mb-4">
+              <p className="text-xs text-gray-500 my-4">
                 Published on: {blog.publishedDate}
               </p>
 
